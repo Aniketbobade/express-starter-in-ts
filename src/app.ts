@@ -2,7 +2,7 @@ import express from 'express';
 import morgan from 'morgan';
 import helmet from 'helmet';
 import cors from 'cors';
-import {requestLogger} from './utility-services/logger'
+import { requestLogger } from './utility-services/logger';
 import * as middlewares from './middlewares';
 import api from './router';
 import MessageResponse from './interfaces/MessageResponse';
@@ -21,8 +21,10 @@ app.get<{}, MessageResponse>('/', (req, res) => {
   });
 });
 app.use((req, res, next) => {
-  const requestBody = req.body ? JSON.stringify(req.body) : '{}'
-  requestLogger.info(`${req.method} ${req.originalUrl} - ${req.ip} \n body: ${requestBody}`);
+  const requestBody = req.body ? JSON.stringify(req.body) : '{}';
+  requestLogger.info(
+    `${req.method} ${req.originalUrl} - ${req.ip} \n body: ${requestBody}`
+  );
   next();
 });
 app.use('/api/v1', api);

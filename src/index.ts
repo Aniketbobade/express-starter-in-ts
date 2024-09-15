@@ -1,5 +1,5 @@
 import app from './app';
-import  Config from './configs';
+import Config from './configs';
 const port = Config.PORT || 5000;
 import db from './database/dbConnect';
 

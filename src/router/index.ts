@@ -9,5 +9,5 @@ router.get<{}, MessageResponse>('/', (req, res) => {
     message: 'API - 👋🌎🌍🌏',
   });
 });
-router.use('/user',userRouter);
+router.use('/user', userRouter);
 export default router;
