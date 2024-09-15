@@ -18,7 +18,7 @@
   "author": "Aniket",
   "repository": {
     "type": "git",
-    "url": "https://github.com/w3cj/express-api-starter.git"
+    "url": "https://github.com/Aniketbobade/express-starter-in-ts.git"
   },
   "license": "MIT",
   "dependencies": {
